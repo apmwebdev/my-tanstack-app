@@ -11,13 +11,13 @@ import { nitro } from 'nitro/vite'
 export default defineConfig({
   plugins: [
     devtools(),
-    nitro(),
     // this is the plugin that enables path aliases
     viteTsConfigPaths({
       projects: ['./tsconfig.json'],
     }),
     tailwindcss(),
     tanstackStart(),
+    nitro(),
     solidPlugin({ ssr: true }),
   ],
 })
